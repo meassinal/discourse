@@ -264,18 +264,18 @@ login:
     regex: "^[a-f0-9]+$"
   enable_sso:
     client: true
-    default: false
+    default: true
   enable_sso_provider: false
   verbose_sso_logging: false
   sso_url:
-    default: ''
+    default: <%= ENV['SSO_URL'] %>
     regex: '^https?:\/\/.+[^\/]$'
-  sso_secret: ''
-  sso_overrides_email: false
-  sso_overrides_username: false
-  sso_overrides_name: false
+  sso_secret: <%= ENV['SSO_SECRET'] %>
+  sso_overrides_email: true
+  sso_overrides_username: true
+  sso_overrides_name: true
   sso_overrides_avatar:
-    default: false
+    default: true
     client: true
   sso_not_approved_url: ''
   email_domains_blacklist:
