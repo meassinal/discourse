@@ -94,6 +94,7 @@ gem 'pry-rails', require: false
 gem 'r2', '~> 0.2.5', require: false
 gem 'rake'
 
+gem 'dotenv-rails', '~> 2.0.1'
 
 gem 'rest-client'
 gem 'rinku'
