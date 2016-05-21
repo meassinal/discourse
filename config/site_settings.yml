@@ -268,9 +268,9 @@ login:
   enable_sso_provider: false
   verbose_sso_logging: false
   sso_url:
-    default: <%= ENV['SSO_URL'] %>
+    default: "<%= ENV['SSO_URL'] %>"
     regex: '^https?:\/\/.+[^\/]$'
-  sso_secret: <%= ENV['SSO_SECRET'] %>
+  sso_secret: "<%= ENV['SSO_SECRET'] %>"
   sso_overrides_email: true
   sso_overrides_username: true
   sso_overrides_name: true
