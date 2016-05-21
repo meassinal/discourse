@@ -21,6 +21,8 @@ Discourse::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  config.assets.enabled = true
+  config.assets.initialize_on_precompile = true
 
   config.log_level = :info
 
@@ -56,6 +58,7 @@ Discourse::Application.configure do
   # For origin pull cdns all you need to do is register an account and configure
   # config.action_controller.asset_host = GlobalSetting.cdn_url
 
+  # Using s3 instead of CDN
   config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
 
   # a comma delimited list of emails your devs have
